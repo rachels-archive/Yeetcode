@@ -3,9 +3,10 @@ class Solution {
         ArrayList<String> answer = new ArrayList<String>(n);
         
         for (int i = 1; i <= n; i ++){
-            String ans = (i % 3 == 0) ? "Fizz" :
+            
+            String ans = (i % 3 == 0 && i % 5 == 0) ? "FizzBuzz" :
+                         (i % 3 == 0) ? "Fizz" :
                          (i % 5 == 0) ? "Buzz" :
-                         (i % 15 == 0) ? "FizzBuzz" :
                          Integer.toString(i);
             answer.add(ans);
         }
